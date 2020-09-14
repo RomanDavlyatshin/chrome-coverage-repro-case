@@ -25,9 +25,9 @@ Steps:
 
 8. **Without reloading the page** perform steps from 4 to 7 and check `data` variable again
 
-It *must* contain coverage for **second** case from switch statement.
+It *must* contain coverage **with multiple ranges** that describes execution of **second** case from switch statement.
 
-But instead, it holds single range for the whole function:
+But instead, it holds **single range** for the whole function and nothing else:
 ```
 functions: Array(1)
   0:
@@ -37,6 +37,9 @@ functions: Array(1)
       0: {count: 1, endOffset: 390, startOffset: 28}
       length: 1
 ```
-**NOTE**: It appears if you perform step 8 **after you open other tab** and **wait** *long enough* (like around 5-10 minutes) coverage is going to be correct (containing multiple ranges, covering switch case 2 with correct execution counts)
+**IMPORTANT NOTE**: It appears if you perform step 8 **after**:
+- **you open other tab**
+- AND **wait** *long enough* (like around 5-10 minutes)
+coverage is going to be correct (containing multiple ranges, covering switch case 2 with correct execution counts)
 
 **P.S.** All steps described above are performed without any target page ( [index.html](/index.html) ) reloads whatsoever
