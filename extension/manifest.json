@@ -1,0 +1,15 @@
+{
+  "name": "Coverage Collector Example",
+  "description": "",
+  "version": "0.1",
+  "permissions": ["debugger", "*://*/coverage", "storage"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "v8 coverage",
+    "default_popup": "index.html"
+  },
+  "manifest_version": 2
+}
